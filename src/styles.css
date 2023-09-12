@@ -1,0 +1,187 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgb(17, 24, 39);
+  color: hsl(200, 100%, 90%);
+  max-width: 400px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+/* Container for the list */
+.list-container {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0,1);
+  border-radius: 1rem;
+  margin-top: 3rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Center the heading */
+h1 {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+/* Form styles */
+.new-item-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Input styles */
+.new-item-form input {
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgb(17 24 39);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  color: hsl(200, 100%, 90%);
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.new-item-form input:focus {
+  border: 1px solid hsl(200, 100%, 70%);
+}
+
+/* Button styles */
+.btn {
+  
+    background: hsl(200, 100%, 50%, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 0.25em 0.5em;
+    border-radius: 0.25em;
+    cursor: pointer;
+    outline: none;
+    
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background: hsl(200, 100%, 50%, 0.2);
+}
+
+.btn.btn-danger {
+  background: hsl(0, 100%, 40%, 0.1);
+  border: 1px solid hsl(0, 100%, 40%);
+  color: hsl(0, 100%, 40%);
+}
+
+.btn.btn-danger:hover,
+.btn.btn-danger:focus-visible {
+  background: hsl(200, 100%, 50%, 0.2);
+}
+
+/* List styles */
+.header {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.3rem 0;
+}
+
+.list li label {
+  display: flex;
+  gap: 0.25rem;
+  cursor: pointer;
+  align-items: center;
+}
+
+.list li:has(input:focus-visible) label {
+  outline: 1px solid hsl(200, 100%, 50%);
+}
+
+.list li input {
+  outline: none;
+  width: 0;
+  height: 0;
+  appearance: none;
+  pointer-events: none;
+  position: absolute;
+}
+
+.list li label::before {
+  content: "";
+  display: block;
+  width: 0.9rem;
+  height: 0.9rem;
+  background: hsl(200, 100%, 90%);
+  border-radius: 0.25em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list li label:hover::before {
+  background: hsl(200, 100%, 80%);
+}
+
+.list li:has(input:checked) label::before {
+  content: "✔";
+  background: hsl(200, 100%, 40%);
+  color: hsl(200, 100%, 90%);
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.list li:has(input:checked) label:hover::before {
+  background: hsl(200, 100%, 30%);
+}
+
+/* Circles */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(10rem);
+}
+
+.circle-1 {
+  background-color: #946263;
+  height: 31.25rem;
+  width: 31.25rem;
+  top: -6rem;
+  z-index: -10;
+  right: 11rem;
+}
+
+.circle-2 {
+  background-color: #676394;
+  height: 31.25rem;
+  width: 50rem;
+  top: -1rem;
+  z-index: -10;
+  left: 40rem;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+label {
+  padding-bottom: 1rem;
+}
