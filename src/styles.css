@@ -11,20 +11,27 @@ body {
   background: rgb(17, 24, 39);
   color: hsl(200, 100%, 90%);
   overflow: hidden;
-  padding: 1rem;
-  margin: 0 auto;
+  padding: 0; /* Remove padding */
   display: flex;
   justify-content: center;
+  
+  min-height: 100vh; /* Ensure the body covers the entire viewport height */
 }
-
+#root {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
 /* Container for the list */
 .list-container {
   padding: 1rem;
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0,1);
   border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-top: 3rem;
-  width: 50rem;
   max-width: 60rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -200,5 +207,6 @@ label {
   body {
     padding: 0.5rem;
   }
-  /* Add more responsive styles as needed */
+
+  
 }
